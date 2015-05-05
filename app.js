@@ -46,6 +46,7 @@ weatherApp.controller('forecastController',['$scope', '$resource', '$routeParams
                           { callback: 'JSON_CALLBACK' },
                           { get: { method: "JSONP" }}
                       );
+
   $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, cnt: $scope.days});
 
   $scope.convertToFarenheit = function(degrees) {
